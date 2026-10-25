@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101411">
+  <meta name="description" content="Smertnik Squad, город и команда Minecraft для политического RP. Набор открыт.">
+  <title>Smertnik Squad, Hamburg | SGRB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-label="Загрузка страницы">
+    <div class="loader-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p>SMERTNIK SQUAD</p><div class="loader-track"><span></span></div>
+  </div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Smertnik Squad, на главную">
+      <span class="brand-crest" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-name">SMERTNIK <b>SQUAD</b><small>HAMBURG <em>│</em> SGRB</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+      <a href="#city">Город</a><a href="#state">Устройство</a><a href="#join">Набор</a>
+      <a class="nav-cta" href="#join">Стать частью <span>↗</span></a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <img class="hero-image is-active" id="hero-city" src="assets/city-night.png" alt="Ночной вид города Minecraft с освещёнными улицами и маяком">
+      <img class="hero-image" id="hero-market" src="assets/market-street.png" alt="Торговая улица города Minecraft, освещённая фонарями">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-meta"><span><i></i> ПОЛИТИЧЕСКИЙ RP</span><span>HAMBURG · SGRB</span></div>
+      <h1 id="hero-title"><span>SMERTNIK</span><span>SQUAD</span></h1>
+      <div class="hero-bottom">
+        <p>Город, который строят вместе.<br>Команда с историей с шестого вайпа.</p>
+        <a class="action-link" href="#join">Вступить в команду <span>↗</span></a>
+        <div class="scene-switch" role="group" aria-label="Выбрать вид города">
+          <button class="scene-button is-active" data-scene="city" aria-pressed="true">ПАНОРАМА</button>
+          <button class="scene-button" data-scene="market" aria-pressed="false">РЫНОК</button>
+        </div>
+      </div>
+      <span class="hero-index">ГОРОД · HAMBURG</span>
+      <a class="scroll-cue" href="#city" aria-label="Прокрутить к городу"><span></span> ЛИСТАЙ ВНИЗ</a>
+    </section>
+
+    <section class="intro section-pad" id="city">
+<div class="intro-layout">
+        <h2 class="reveal">Сначала была<br>команда</h2>
+        <div class="intro-copy reveal">
+          <p class="lead">Мы играем вместе с шестого вайпа Империума, строим города, развиваем государство и создаём историю, в которой у каждого есть своя роль.</p>
+          <p>Здесь важны не только стены и улицы. Город держится на людях, общих правилах и решениях, которые мы принимаем вместе.</p>
+          <a class="text-link" href="#state">Как устроен город <span>→</span></a>
+        </div>
+      </div>
+      <figure class="city-photo reveal">
+        <img src="assets/market-street.png" alt="Фонари и торговые ряды на главной улице города">
+        <figcaption><span>УЛИЦЫ HAMBURG</span><span>СОЗДАНО В ИГРЕ</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="state section-pad" id="state">
+<div class="state-heading reveal"><h2>У города есть<br>свой порядок</h2><p>Политический RP, это решения, ответственность и совместная работа, а не только строительство.</p></div>
+      <div class="state-list">
+        <article class="state-row reveal"><span class="row-num">A</span><h3>Управление</h3><p>Лидер руководит государством и опирается на поддержку жителей через плебисциты и референдумы.</p><span class="row-mark">↗</span></article>
+        <article class="state-row reveal"><span class="row-num">B</span><h3>Законы и суд</h3><p>Конституция, система законов и судебная роль помогают разбирать споры и поддерживать порядок.</p><span class="row-mark">↗</span></article>
+        <article class="state-row reveal"><span class="row-num">C</span><h3>Гражданство</h3><p>Паспортная система помогает вести учёт жителей и участвовать в жизни города.</p><span class="row-mark">↗</span></article>
+      </div>
+      <div class="document-links reveal">
+        <span>ДОКУМЕНТЫ ГОРОДА</span>
+        <a href="https://docs.google.com/document/d/11QIUgRpNJ-nvxmHioclnuXNSS_scKyxK2BzXjR2uUyg/edit?tab=t.0" target="_blank" rel="noreferrer">Конституция <span>↗</span></a>
+        <a href="https://docs.google.com/document/d/1lMVgB7UFSeO9FQuPOiWltzN5GGqNqEK84N0_vxp6_3I/edit?usp=sharing" target="_blank" rel="noreferrer">Законы <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="join section-pad" id="join">
+<div class="join-layout">
+        <div class="join-copy reveal"><h2>Нужны те,<br>кто делает</h2><p>Ищем адекватных и надёжных игроков, опытных и тех, кто только начинает. Помогаем освоиться и найти своё направление.</p><a class="join-button" href="https://discord.gg/WucEgXW3M" target="_blank" rel="noreferrer">Обсудить вступление <span>↗</span></a></div>
+        <div class="roles reveal" aria-label="Направления для старта"><div><strong>Ферма</strong><small>РЕСУРСЫ И СНАБЖЕНИЕ</small></div><div><strong>Шахта</strong><small>ДОБЫЧА И МАТЕРИАЛЫ</small></div><div><strong>Строительство</strong><small>УЛИЦЫ И ЗДАНИЯ</small></div><a href="https://discord.gg/WucEgXW3M" target="_blank" rel="noreferrer">Посмотреть, чем живёт сквад <span>↗</span></a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-top"><a class="brand" href="#home"><span class="brand-crest" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">SMERTNIK <b>SQUAD</b><small>HAMBURG <em>│</em> SGRB</small></span></a><span class="footer-note">ПОЛИТИЧЕСКИЙ RP · MINECRAFT</span><a class="footer-contact" href="https://discord.gg/WucEgXW3M" target="_blank" rel="noreferrer">DISCORD ↗</a></div>
+    <div class="footer-wordmark" aria-hidden="true">HAMBURG</div><div class="footer-bottom"><span>SMERTNIK SQUAD</span><span>ЧЕРНОВИК ГЛАВНОЙ СТРАНИЦЫ</span><a href="#home">НАВЕРХ ↑</a></div>
+  </footer>
+</body>
+</html>

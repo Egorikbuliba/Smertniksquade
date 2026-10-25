@@ -1,0 +1,11 @@
+const preloader=document.querySelector('#preloader');
+window.addEventListener('load',()=>setTimeout(()=>preloader.classList.add('is-done'),420),{once:true});
+const sceneButtons=[...document.querySelectorAll('.scene-button')];
+const sceneImages={city:document.querySelector('#hero-city'),market:document.querySelector('#hero-market')};
+sceneButtons.forEach(button=>button.addEventListener('click',()=>{const scene=button.dataset.scene;Object.entries(sceneImages).forEach(([key,image])=>image.classList.toggle('is-active',key===scene));sceneButtons.forEach(item=>{const active=item===button;item.classList.toggle('is-active',active);item.setAttribute('aria-pressed',String(active));});}));
+const menuButton=document.querySelector('#menu-toggle');
+const nav=document.querySelector('#main-nav');
+menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');nav.classList.toggle('is-open',open);});
+nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menuButton.setAttribute('aria-expanded','false');nav.classList.remove('is-open');}));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}}),{threshold:.14});
+document.querySelectorAll('.reveal').forEach(node=>observer.observe(node));
